@@ -30,8 +30,9 @@ export default function Header() {
 
   return (
     <header className="header" style={(scrollPosition >= 0) ? ({opacity: `${scrollPosition}%`}) : ({display: "none"})}>
-      {/* <h1>scroll: {scrollOpacity}</h1> */}
       <div className="header__content">
+
+        {/* Photo */}
         <a href="#home-hero">
           <div className="header__logo-container animate slide-left">
             <div className="header__logo-img-cont">
@@ -44,6 +45,8 @@ export default function Header() {
             <span className="header__logo-sub">Mike Davis</span>
           </div>
         </a>
+
+        {/* Mobile Icons */}
         <div className="header__social-cont animate slide-right">
           <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mikedavissoftware">
             <img
@@ -68,6 +71,7 @@ export default function Header() {
           </a>
         </div>
 
+        {/* Desktop Nav Links */}
         <div className="header__main">
           <ul className="header__links animate slide-right">
             <li className="header__link-wrapper">
@@ -93,6 +97,7 @@ export default function Header() {
             </li>
           </ul>
           
+          {/* Hamburger Menu Icon */}
           <div className="header__main-ham-menu-cont animate glow">
             <img
               src={HamMenu}
@@ -110,6 +115,7 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Mobile Nav Links */}
       <div className={`header__sm-menu${(active) ? ("--active") : ("")}`}>
         <div className="header__sm-menu-content">
           <ul className="header__sm-menu-links">
@@ -144,7 +150,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* <h1 style={{display: "block", textAlign: "center", fontSize: "30px"}}>{scrollPosition}</h1> */}
     </header>
   )
 }

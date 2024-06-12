@@ -18,6 +18,14 @@ export default function App() {
 
       <HomePage />
 
+      <Routes>
+
+        <Route component={<HomePage/>} />
+        <Route component={<HomePage/>} />
+        <Route component={<HomePage/>} />
+
+      </Routes>
+
       <Footer />
 
     </div>
